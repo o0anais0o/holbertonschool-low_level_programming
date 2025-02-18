@@ -3,13 +3,13 @@
 #include <stdio.h>
 
 /**
- * main - Prints the alphabet in lowercase.
+ * main - numbers of base 10 starting from 0
  *
  * Return: Always 0.
  */
 int main(void)
 {
-	int n;
+	int n; //Déclaration variable 'n'
 
 	for (n = 0; n < 10; n++)
 	{
@@ -18,3 +18,4 @@ int main(void)
 	putchar('\n');
 
 	return (0);
+}
