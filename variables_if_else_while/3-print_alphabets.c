@@ -9,13 +9,13 @@
  */
 int main(void)
 {
-	char alphabetminuscule;
+	char alphabet;
 
-	for (alphabetminuscule = 'a'; alphabetminuscule <= 'z' ; alphabetminuscule++)
+	for (alphabet = 'a'; alphabet <= 'z' ; alphabet++)
 		putchar(alphabetminuscule);
-
-	for (alphabetmajuscule = 'A'; alphabetmajuscule <= 'Z' ; alphabetmajuscule++)
- 		putchar(alphabetmajuscule);
+	
+	for (alphabet = 'A'; alphabet <= 'Z' ; alphabet++)
+ 		putchar(alphabet);
 
 	putchar('\n');
 
