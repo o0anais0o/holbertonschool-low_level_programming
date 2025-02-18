@@ -9,12 +9,12 @@
  */
 int main(void)
 {
-	int numbers;
+	int n;
 
-	for (nombers = 0; nombers < 10; nombers++)
-		printf("%d", numbers);
-}
-	printf('\n');
+	for (n = 0; n < 10; n++)
+	{
+		putchar(i + '0');
+	}	
+	putchar('\n');
 
 	return (0);
-}
