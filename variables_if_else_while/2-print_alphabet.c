@@ -2,14 +2,17 @@
 #include <time.h>
 #include <stdio.h>
 
+/**
+ * main - Prints the alphabet in lowercase.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-	//declare a variable
 	char alphabetminuscule;
 
 	for (alphabetminuscule = 'a'; alphabetminuscule <= 'z' ; alphabetminuscule++)
 	{
-		// print the value of the variable
 		putchar(alphabetminuscule); 
 
 	}
