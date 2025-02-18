@@ -14,9 +14,9 @@ int main(void)
 	for (nombers = 0; nombers < 10; nombers++)
 	{
 
-		putchar(nombers + '0');
+		printf("%d, numbers);
 		if (nombers < 9);
 	}
-	putchar('\n');
+	printf('\n');
 	return (0);
 }
