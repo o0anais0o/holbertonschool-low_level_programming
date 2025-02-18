@@ -13,9 +13,8 @@ int main(void)
 
 	for (alphabetminuscule = 'a'; alphabetminuscule <= 'z' ; alphabetminuscule++)
 	{
-		putchar(alphabetminuscule); 
+		putchar(alphabetminuscule);
 
-	}
 
 	putchar('\n');
 	return (0);
