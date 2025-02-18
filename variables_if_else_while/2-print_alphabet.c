@@ -12,10 +12,10 @@ int main(void)
 	char alphabetminuscule;
 
 	for (alphabetminuscule = 'a'; alphabetminuscule <= 'z' ; alphabetminuscule++)
-	{
 		putchar(alphabetminuscule);
 
 
 	putchar('\n');
+
 	return (0);
 }
