@@ -10,18 +10,19 @@
 int main(void)
 {
 	int num;
-	char letter;
 
-	for (num = 0; num < 10; num++)
-	{
-		putchar(num + '0');
-	if (num < 9)
-	{
 
-	putchar(',');
-	putchar(' ');
+	for (num = 0; num <= 10; num++)
+	{
+		putchar((num % 10) + '0');
+		if (num == 9)
+			continue;
+
+		putchar(',');
+		putchar(' ');
 	}
-}
-	putchar('\')
+
+	putchar('\n');
+
 	return (0);
 }
