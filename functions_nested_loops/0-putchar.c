@@ -1,9 +1,8 @@
-#include <main.h>
+#include "main.h"
 
 /**
- * main - affiche _putchar suivi d'une nouvelle ligne
- *
- * Return: Toujours 0 (Succès)
+ * main - Entrt point
+ * Return: Always 0 (Success)
  */
 
 int main(void)
