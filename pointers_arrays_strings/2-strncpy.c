@@ -16,7 +16,7 @@ char *_strncpy(char *dest, char *src, int n)
 	for (i = 0; i < n && src[i] != '\0'; i++)
 		dest[i] = src[i];
 
-	/* Si moins de n caractères ont été copiés, remplit le reste avec des '\0' */
+	/* Si moins de n caractères sont copiés, remplit le reste avec des '\0' */
 	for (; i < n; i++)
 		dest[i] = '\0';
 
