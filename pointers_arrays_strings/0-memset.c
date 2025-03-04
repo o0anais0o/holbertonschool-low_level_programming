@@ -1,21 +1,19 @@
 #include "main.h"
 
 /**
- * memset - remplit les n premiers octets de la zone mémoire.
- * pointée par @s avec l'octet constant @c.
- * @s: un pointeur vers la zone mémoire à remplir.
- * @c: le caractère avec lequel remplir la zone mémoire.
- * @n: le nombre d'octets à remplir.
+ * _memset - Fills memory with a constant byte
+ * @s: Pointer to the memory area to be filled
+ * @b: The constant byte to fill the memory with
+ * @n: Number of bytes to be filled
  *
- * Return: un pointeur vers la zone mémoire remplie @s.
+ * Return: Pointer to the memory area s
  */
-void *_memset(void *s, int c, size_t n)
+char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int index;
-	unsigned char *memory = s, value = c;
 
 	for (index = 0; index < n; index++)
-		memory[index] = value;
+		s[index] = b;
 
-	return (memory);
+	return (s);
 }
