@@ -1,31 +1,34 @@
 #include "main.h"
 
 /**
- * print_square - prints a square using the character #
- * @size: the size of the square to be printed
- *
- * Description: If size is 0 or less, the function should print only a new line
+ * print_triangle - prints a triangle of # characters
+ * followed by a new line
+ * @size: size of the triangle
  */
 
-void print_square(int size)
+void print_triangle(int size)
 {
-	int row, column;
+	const int size = 5;  // Declare and initialize size
+	int row, column, space;
 
-	if (size <= 0)
+	if (size <= 0) 
 	{
-		_putchar('\n');
+		putchar('\n');
 	}
 	else
 	{
-		for (row = 0; row < size; row++)
+		for (row = 1; row <= size; row++)  // Fixed loop condition
 		{
+			for (space = size - row; space > 0; space--)
 			{
-				for (column = 0; column < size; column++)
-				{
-				_putchar('#');
-				}
+				putchar(' ');	
 			}
-			_putchar('\n');
+			for (column = 1; column <= row; column++)
+			{
+				putchar('#');
+			}
+			putchar('\n');
 		}
 	}
+	return 0;  // Added return statement
 }
