@@ -16,22 +16,21 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-void *mem;
-char *filler;
-unsigned int index;
+char *memory_block;
+unsigned int total_size, i;
 
-if (nmemb == 0 || size == 0)
+if (nmemb == 0 || size == 0) /*Vérifier si nmemb ou size est 0*/
 return (NULL);
 
-mem = malloc(size * nmemb);
+total_size = nmemb * size;  /*Calculer la taille totale nécessaire*/
 
-if (mem == NULL)
+memory_block = malloc(total_size);  /*Allouer la mémoire*/
+if (memory_block == NULL)
 return (NULL);
 
-filler = mem;
+for (i = 0; i < total_size; i++) /*Initialiser la mémoire allouée à zéro*/
+memory_block[i] = 0;
 
-for (index = 0; index < (size * nmemb); index++)
-filler[index] = '0';
-return (mem);
+return ((void *)memory_block);
 
 }
