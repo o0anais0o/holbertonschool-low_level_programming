@@ -15,20 +15,20 @@
 
 int *array_range(int min, int max)
 {
-	int *array, index, size;
+	int *array, index, size; /*déclare trois variables*/
 
-	if (min > max)
+	if (min > max) /*Vérification de la validité des paramètres*/
 		return (NULL);
 
-	size = max - min + 1;
+	size = max - min + 1; /*Calcul de la taille du tableau*/
 
-	array = malloc(sizeof(int) * size);
+	array = malloc(sizeof(int) * size); /*Allocation de mémoire*/
 
-	if (array == NULL)
+	if (array == NULL) /*Vérification de l'allocation*/
 		return (NULL);
 
-	for (index = 0; index < size; index++)
+	for (index = 0; index < size; index++) /*Remplissage du tableau*/
 		array[index] = min++;
 
-	return (array);
+	return (array); /*Retour du tableau*/
 }
