@@ -23,9 +23,9 @@ types and function written for the program [3-main.c](./3-main.c).
 
 | Type/File          | Definition/Prototypes                                        |
 | ------------------ | ------------------------------------------------------------ |
-| `struct op`        | <ul><li>`char *op`</li><li>`int (*f)(int a, int b)`</li><ul> |
+| `struct op`        | `char *op``int (*f)(int a, int b)` |
 | `typedef op_t`     | `struct op`                                                  |
-| `3-op_functions.c` | <ul><li>`int op_add(int a, int b);`</li><li>`int op_sub(int a, int b);`</li><li>`int op_mul(int a, int b);`</li><li>`int op_div(int a, int b);`</li><li>`int op_mod(int a, int b);`</li></ul>                                            |
+| `3-op_functions.c` | `int op_add(int a, int b);``int op_sub(int a, int b);``int op_mul(int a, int b);`</`int op_div(int a, int b);``int op_mod(int a, int b);`                                            |
 | `3-get_op_func.c`  | `int (*get_op_func(char *s))(int, int);`                     |
 
 ## Tasks :page_with_curl:
@@ -77,3 +77,4 @@ types and function written for the program [3-main.c](./3-main.c).
     * Opcodes are printed two-decimal long in hexadecimal, lowercase.
     * If the number of arguments is incorrect, the program prints `Error`
     followed by a new line and exits with a status value of `2`.
+  
