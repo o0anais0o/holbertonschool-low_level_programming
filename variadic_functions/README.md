@@ -18,7 +18,7 @@ prototypes for all types and functions written in the project.
 | `1-print_numbers.c`      | `void print_numbers(const char *separator, const unsigned int n, ...);` |
 | `2-print_strings.c`      | `void print_strings(const char *separator, const unsigned int n, ...);` |
 | `3-print_all.c`          | `void print_all(const char * const format, ...);`                       |
-| `struct printer`         | <ul><li>`char *symbol`</li><li>`void (*print)(va_list arg)`</li></ul>   |
+| `struct printer`         | `char *symbol``void (*print)(va_list arg)`   |
 | `typedef printer_t`      | `struct printer`                                                        |
 
 ## Tasks :page_with_curl:
@@ -56,4 +56,3 @@ prototypes for all types and functions written in the project.
   * [100-hello_holberton.asm](./100-hello_holberton.asm): 64-bit assembly program that
   prints `Hello, Holberton`, followed by a new line using only the system call
   `write` with `int`.
-  
