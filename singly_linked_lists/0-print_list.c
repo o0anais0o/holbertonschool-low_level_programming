@@ -10,20 +10,27 @@
 
 size_t print_list(const list_t *h)
 {
-int count_byte = 0;
-int index;
-node = "[len] str";
-
-for (index = 0; node[index] != "NULL"; index++)
+size_t node_count = 0;
+const list_t *current = h;
+current->len
+current->str
 
 if (h == NULL)
-Return('0');
+return (0);
 
+{
+while (current != NULL)
+current = current->next;
+node_count++;
+}
 
-printf("[5] "Hello"\n [5] "World"");
-printf("\n");
-printf("[0] (nil)\n [5] "World"");
-count_byte++
-
-Return(count_byte);
+if (current->str == NULL)
+{
+printf("[0] (nil)\n)");
+}
+else
+{
+printf("[%d] %s\n", current->len, curent->str);
+}
+return (node_count);
 }
