@@ -13,14 +13,13 @@ size_t list_len(const list_t *h)
 size_t node_count = 0;
 const list_t *current = h;
 
-if (current->str == NULL)
-printf ("[%d]" %zu,  )
-else
-
+if (h == NULL)
 return (0);
 
 while (current != NULL)
+{
 node_count++;
-(current = current->next);
-
+current = current->next;
+}
+return (node_count);
 }
