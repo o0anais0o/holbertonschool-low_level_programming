@@ -1,66 +1,49 @@
-#include <string.h>
 #include "lists.h"
+#include <string.h>
 
 /**
-* _strlen_custom - Calculates the length of a string.
-* @s: Pointer to the string to parse.
-*
-* Return: Length of the string.
-*/
-unsigned int _strlen_custom(const char *s)
-{
-	unsigned int length = 0;
-
-	if (s == NULL)
-		return (0);
-
-	while (s[length] != '\0')
-		length++;
-
-	return (length);
-}
-
-/**
-* add_node_end - Adds a new node to the end of a linked list.
-* @head: Double pointer to the head of the list.
-* @str: String to duplicate in the new node.
-*
-* Return: Address of the new node, or NULL on failure.
-*/
+ * add_node_end - Adds a new node at the end
+ *                of a list_t list.
+ * @head: A pointer the head of the list_t list.
+ * @str: The string to be added to the list_t list.
+ *
+ * Return: If the function fails - NULL.
+ *         Otherwise - the address of the new element.
+ */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_node, *current;
+	char *dup;
+	int len;
+	list_t *new, *last;
 
-	/* Memory allocation for the new node */
-	new_node = malloc(sizeof(list_t));
-	if (!new_node)
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
 		return (NULL);
 
-	/* String duplication and error handling */
-	if (!new_node->str)
+	dup = strdup(str);
+	if (str == NULL)
 	{
-		free(new_node);
+		free(new);
 		return (NULL);
 	}
 
-	/* Calculating string length with _strlen_custom */
-	new_node->len = _strlen_custom(str);
-	new_node->next = NULL;
+	for (len = 0; str[len];)
+		len++;
 
-	/* If the list is empty, the new node becomes the head */
+	new->str = dup;
+	new->len = len;
+	new->next = NULL;
+
 	if (*head == NULL)
+		*head = new;
+
+	else
 	{
-		*head = new_node;
-		return (new_node);
+		last = *head;
+		while (last->next != NULL)
+			last = last->next;
+		last->next = new;
 	}
 
-	/* Traverse to the last node */
-	current = *head;
-	while (current->next != NULL)
-		current = current->next;
-
-	/* Add the new node at the end */
-	current->next = new_node;
-
-	return (new_node);
+	return (*head);
 }
