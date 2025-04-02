@@ -3,13 +3,27 @@
 #include "lists.h"
 
 /**
+ * _strlen - Calcule la longueur d'une chaîne de caractères.
+ * @s: Pointeur vers la chaîne à analyser.
+ *
+ * Return: Longueur de la chaîne.
+ */
+unsigned int _strlen(const char *s)
+{
+unsigned int len = 0;
+
+while (s[len])
+len++;
+return (len);
+}
+
+/**
  * add_node - Adds a new node at the beginning of a list_t list.
  * @head: Double pointer to the head of the list.
  * @str: String to duplicate and add to the new node.
  *
  * Return: Address of the new element, or NULL if it failed.
  */
-
 list_t *add_node(list_t **head, const char *str)
 {
 list_t *new_node;
